@@ -22,7 +22,7 @@ void main()
 
     vec2 uv = vUv;
     float time = uTime;
-    vec2 parallaxUV = uvPOM( uHeight, uv, lightDirectionTangent, uParallaxScale );
+    vec2 parallaxUV = uvPOM( uHeight, uv, lightDirectionTangent, uParallaxScale, 8.0, 128.0 );
 
     vec3 normalz = texture( uNormals, parallaxUV ).xyz * 2.0 - 1.0;
     normalz = normalize(normalz );

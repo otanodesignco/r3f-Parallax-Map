@@ -24,10 +24,10 @@ void main()
     viewDirection = cameraPosition - worldPosition.xyz;
     normals = normal;
 
-    vec3 N = normalize( normalMatrix * normal );
-    vec3 T = normalize( normalMatrix * tangent.xyz );
+    vec3 N = normalize( modelMatrix * vec4( normal, 0.0 ) ).xyz;
+    vec3 T = normalize( modelMatrix * tangent ).xyz;
     vec3 B = normalize( cross( N, T ) * tangent.w );
-    TBN = mat3( T, B, N );
+    TBN = transpose( mat3( T, B, N ) );
 
     viewDirTangent = normalize( TBN * normalize( viewDirection ) );
     vec3 worldPosTangent = TBN * worldPosition;
