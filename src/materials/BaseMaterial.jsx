@@ -6,10 +6,10 @@ import fragment from '../shaders/fragment.glsl'
 import { RepeatWrapping, Vector2, Color } from 'three'
 
 export default function BaseMaterial( {
-    albedo ='./textures/albedo/albedoIce.jpg',
-    height = './textures/heightmaps/heightIce.jpg',
-    normal = './textures/normalmaps/normalIce.jpg',
-    parallaxScale = 0.354,
+    albedo ='./textures/albedo/albedoIce2.jpg',
+    height = './textures/heightmaps/heightIce2.jpg',
+    normal = './textures/normalmaps/normalIce2.jpg',
+    parallaxScale = 0.07,
     lightColor = '#b9e8ea',
     darkColor = '#20c3d0',
     ...props

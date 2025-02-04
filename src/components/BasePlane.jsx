@@ -9,9 +9,9 @@ export default function BasePlane()
 
   const { parallaxScale } = useControls({
     parallaxScale:{
-      value: 0.378,
+      value: 0.07,
       min: 0.0001,
-      max: 10,
+      max: 0.25,
       step: 0.01
     }
   })

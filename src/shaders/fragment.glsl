@@ -15,14 +15,14 @@ in mat3 TBN;
 in vec3 viewDirTangent;
 in vec3 lightDirectionTangent;
 
-#include ./lib/uv/uvPOM.glsl
+#include ./lib/uv/uvPM.glsl
 
 void main()
 {
 
     vec2 uv = vUv;
     float time = uTime;
-    vec2 parallaxUV = uvPOM( uHeight, uv, lightDirectionTangent, uParallaxScale, 8.0, 256.0 );
+    vec2 parallaxUV = uvPM( uHeight, uv, lightDirectionTangent, uParallaxScale );
 
     vec3 normalz = texture( uNormals, parallaxUV ).xyz * 2.0 - 1.0;
     normalz = normalize(normalz );
